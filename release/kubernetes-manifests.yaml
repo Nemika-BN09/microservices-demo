@@ -65,10 +65,10 @@ spec:
             command: ["/bin/grpc_health_probe", "-addr=:8080"]
         resources:
           requests:
-            cpu: 100m
+            cpu: 500m
             memory: 64Mi
           limits:
-            cpu: 200m
+            cpu: 600m
             memory: 128Mi
 ---
 apiVersion: v1
@@ -138,10 +138,10 @@ spec:
             value: "cartservice:7070"
           resources:
             requests:
-              cpu: 100m
+              cpu: 500m
               memory: 64Mi
             limits:
-              cpu: 200m
+              cpu: 700m
               memory: 128Mi
 ---
 apiVersion: v1
@@ -206,10 +206,10 @@ spec:
           value: "1"
         resources:
           requests:
-            cpu: 100m
+            cpu: 500m
             memory: 220Mi
           limits:
-            cpu: 200m
+            cpu: 700m
             memory: 450Mi
 ---
 apiVersion: v1
@@ -301,10 +301,10 @@ spec:
           #   value: "true"
           resources:
             requests:
-              cpu: 100m
+              cpu: 500m
               memory: 64Mi
             limits:
-              cpu: 200m
+              cpu: 700m
               memory: 128Mi
 ---
 apiVersion: v1
@@ -378,10 +378,10 @@ spec:
             command: ["/bin/grpc_health_probe", "-addr=:50051"]
         resources:
           requests:
-            cpu: 100m
+            cpu: 500m
             memory: 64Mi
           limits:
-            cpu: 200m
+            cpu: 700m
             memory: 128Mi
 ---
 apiVersion: v1
