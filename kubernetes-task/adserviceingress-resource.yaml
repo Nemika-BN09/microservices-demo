@@ -12,7 +12,7 @@ spec:
     - http:
         paths:
           - path: /nginx(/|$)(.*)
-            pathType: prefix
+            pathType: Prefix
             backend: 
               service:
                 name: adservice-svc
