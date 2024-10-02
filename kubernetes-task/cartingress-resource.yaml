@@ -15,7 +15,8 @@ spec:
             pathType: Prefix
             backend: 
               service:
-                name: httpd-svc
+                name: httpd-cartsvc
                 port: 
                   number: 80
+
                   
