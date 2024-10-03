@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata: 
+  name: cart-ingress
+  annotations: 
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: cart
+  rules: 
+    - http:
+        paths:
+          - path: /https://hub.docker.com/repository/docker/clahandevops/cartservice-image/tags(/|$)(.*)
+            pathType: Prefix
+            backend: 
+              service:
+                name: cart-service
+                port: 
+                  number: 8080
+                  
