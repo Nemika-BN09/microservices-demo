@@ -14,9 +14,9 @@ spec:
     spec:
       containers: 
         - name: cart-container
-          image: clahandevops/cartservice-image:latest
+          image: clahandevops/flower-img:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 3000
           env: 
             - name: TITLE
               value: "WELCOME TO CART"
@@ -28,8 +28,8 @@ metadata:
 spec: 
   type: ClusterIP
   ports:
-    - port: 7070
-      targetPort: 8080
+    - port: 3015
+      targetPort: 3000
       protocol: TCP
   selector:
     app: mycart-app
