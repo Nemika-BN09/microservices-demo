@@ -1,30 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: adservice-deployment
+  name: add-deployment
 spec:
-  replicas: 3
+  replicas: 2
   selector: 
     matchLabels:
-      app: nginx-app
+      app: my-app
   template:
     metadata:
       labels:
-        app: nginx-app
+        app: my-app
     spec:
       containers: 
-        - name: adservice-container
+        - name: adcontainer
           image: clahandevops/user:latest
           ports:
             - containerPort: 80
           env: 
             - name: TITLE
-              value: "NGINX-APP"
+              value: "WELCOME TO LOGIN USER"
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: adservice-svc
+  name: add-svc
 spec: 
   type: ClusterIP
   ports:
@@ -32,5 +32,5 @@ spec:
       targetPort: 80
       protocol: TCP
   selector:
-    app: nginx-app
+    app: my-app
 
