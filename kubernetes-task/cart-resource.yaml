@@ -11,7 +11,7 @@ spec:
   rules: 
     - http:
         paths:
-          - path: clahandevops/flower-img:latest(/|$)(.*)
+          - path: /clahandevops/flower-img:latest(/|$)(.*)
             pathType: Prefix
             backend: 
               service:
