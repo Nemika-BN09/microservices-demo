@@ -11,7 +11,7 @@ spec:
   rules: 
     - http:
         paths:
-          - path: /flower-img:latest(/|$)(.*)
+          - path: /nginx(/|$)(.*)
             pathType: Prefix
             backend: 
               service:
