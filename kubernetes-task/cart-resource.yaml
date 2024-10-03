@@ -11,7 +11,7 @@ spec:
   rules: 
     - http:
         paths:
-          - path: /https://hub.docker.com/repository/docker/clahandevops/cartservice-image/tags(/|$)(.*)
+          - path: /clahandevops/cartservice-image:latest(/|$)(.*)
             pathType: Prefix
             backend: 
               service:
